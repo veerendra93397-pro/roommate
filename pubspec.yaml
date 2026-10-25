@@ -1,0 +1,37 @@
+name: roommate
+description: RoomMate - share expenses, stay united, make it easy.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  firebase_core: any
+  firebase_auth: any
+  cloud_firestore: any
+  firebase_messaging: any
+  image_picker: any
+  url_launcher: any
+  shared_preferences: any
+  pdf: any
+  excel: any
+  path_provider: any
+  share_plus: ^10.1.4
+  local_auth: any
+  google_mlkit_text_recognition: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: any
+flutter:
+  uses-material-design: true
+  android/key.properties
+  *.jks
+  *.keystore
+  functions/node_modules/
