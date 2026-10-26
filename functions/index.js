@@ -34,7 +34,7 @@ async function sendToUsers(uids, title, body, data = {}) {
     tokens,
     notification: { title, body },
     data,
-    android: { priority: "high" },
+    android: { priority: "high", notification: { channelId: "roommate_alerts" } },
   });
 
   // Forget tokens of phones where the app was uninstalled.

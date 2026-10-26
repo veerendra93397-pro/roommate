@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets.dart';
+import 'qr_scan_screen.dart';
 
 class MembersScreen extends StatelessWidget {
   const MembersScreen({super.key});
@@ -82,6 +83,11 @@ class MembersScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w800, fontSize: 20, letterSpacing: 2)),
                         ],
                       ),
+                    ),
+                    IconButton(
+                      tooltip: 'Show QR code',
+                      onPressed: () => showRoomQr(context),
+                      icon: const Icon(Icons.qr_code_2_rounded, color: AppColors.primary),
                     ),
                     TextButton.icon(
                       onPressed: () {

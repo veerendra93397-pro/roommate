@@ -23,6 +23,10 @@ dependencies:
   share_plus: ^10.1.4
   local_auth: any
   google_mlkit_text_recognition: any
+  mobile_scanner: ^7.4.2
+  qr_flutter: ^4.1.0
+  gal: ^2.3.3
+  flutter_local_notifications: ^22.3.3
 
 dev_dependencies:
   flutter_test:
@@ -31,7 +35,3 @@ dev_dependencies:
   flutter_launcher_icons: any
 flutter:
   uses-material-design: true
-  android/key.properties
-  *.jks
-  *.keystore
-  functions/node_modules/

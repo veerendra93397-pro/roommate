@@ -1,6 +1,10 @@
 // GENERATED translations (English text -> Kannada / Hindi). Add more lines here to translate more text.
 
 const Map<String, String> knStrings = {
+  'Scan room QR code': 'ರೂಮ್ QR ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ',
+  'Share': 'ಹಂಚಿಕೊಳ್ಳಿ',
+  'Download': 'ಡೌನ್‌ಲೋಡ್',
+  'Upload QR Photo': 'QR ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ',
   'Current balances (all time)': 'ಪ್ರಸ್ತುತ ಬಾಕಿಗಳು (ಎಲ್ಲಾ ಸಮಯ)',
   'Each person\'s share': 'ಪ್ರತಿಯೊಬ್ಬರ ಪಾಲು',
   'It will be removed for everyone.': 'ಇದು ಎಲ್ಲರಿಗೂ ಅಳಿಸಲ್ಪಡುತ್ತದೆ.',
@@ -194,6 +198,10 @@ const Map<String, String> knStrings = {
 };
 
 const Map<String, String> hiStrings = {
+  'Scan room QR code': 'रूम QR कोड स्कैन करें',
+  'Share': 'शेयर करें',
+  'Download': 'डाउनलोड',
+  'Upload QR Photo': 'QR फोटो अपलोड करें',
   'Current balances (all time)': 'वर्तमान बैलेंस (कुल)',
   'Each person\'s share': 'हर व्यक्ति का हिस्सा',
   'It will be removed for everyone.': 'यह सभी के लिए हटा दिया जाएगा।',

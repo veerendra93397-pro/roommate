@@ -4,6 +4,7 @@ import '../models.dart';
 import '../services/auth_service.dart';
 import '../theme.dart';
 import '../widgets.dart';
+import 'qr_scan_screen.dart';
 
 /// Shown to signed-in users who are not in a room yet.
 /// When create/join succeeds, AuthGate switches to the Home screen by itself.
@@ -72,6 +73,23 @@ class _CreateJoinRoomScreenState extends State<CreateJoinRoomScreen> {
     );
     if (name == null || name.isEmpty) return;
     await _run(() => appState.createRoom(name));
+  }
+
+  Future<void> _scan() async {
+    final code = await Navigator.push<String>(
+      context,
+      MaterialPageRoute(builder: (_) => const QrScanScreen()),
+    );
+    if (code == null || !mounted) return;
+    _code.text = code;
+    await _run(() => appState.joinRoom(code));
+  }
+
+  Future<void> _uploadQr() async {
+    final code = await pickRoomQrFromPhoto(context);
+    if (code == null || !mounted) return;
+    _code.text = code;
+    await _run(() => appState.joinRoom(code));
   }
 
   Future<void> _join() async {
@@ -179,11 +197,14 @@ class _CreateJoinRoomScreenState extends State<CreateJoinRoomScreen> {
                   label: 'Scan QR Code',
                   icon: Icons.qr_code_scanner_rounded,
                   outlined: true,
-                  onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('QR scanning needs a camera plugin (e.g. mobile_scanner) – add later.'),
-                    ),
-                  ),
+                  onPressed: _busy ? null : _scan,
+                ),
+                const SizedBox(height: 10),
+                PrimaryButton(
+                  label: 'Upload QR Photo',
+                  icon: Icons.image_outlined,
+                  outlined: true,
+                  onPressed: _busy ? null : _uploadQr,
                 ),
               ],
             ),
