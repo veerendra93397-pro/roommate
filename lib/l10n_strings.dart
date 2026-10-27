@@ -1,6 +1,7 @@
 // GENERATED translations (English text -> Kannada / Hindi). Add more lines here to translate more text.
 
 const Map<String, String> knStrings = {
+  'Download Android App': 'Android ಆ್ಯಪ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ',
   'Scan room QR code': 'ರೂಮ್ QR ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ',
   'Share': 'ಹಂಚಿಕೊಳ್ಳಿ',
   'Download': 'ಡೌನ್‌ಲೋಡ್',
@@ -198,6 +199,7 @@ const Map<String, String> knStrings = {
 };
 
 const Map<String, String> hiStrings = {
+  'Download Android App': 'Android ऐप डाउनलोड करें',
   'Scan room QR code': 'रूम QR कोड स्कैन करें',
   'Share': 'शेयर करें',
   'Download': 'डाउनलोड',
